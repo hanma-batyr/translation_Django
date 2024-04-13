@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    <title>Мой сайт</title>
+</head>
+<body>
+    <div class="main-content">
+        <div class="language-selector">
+            <label for="source-lang">Выберите язык:</label>
+            <select id="source-lang" name="source_lang">
+                {% for code, lang_name in languages %}
+                    <option value="{{ code }}">{{ lang_name }}</option>
+                {% endfor %}
+            </select>
+            <div class="input-block">
+                <textarea id="input-text" name="input_text" placeholder="Введите текст..."></textarea>
+            </div>
+        </div>
+        <div class="action-buttons">
+            <button id="translate-button">Перевести</button>
+            <button id="swap-button">&#8645;</button>
+        </div>
+        <div class="language-selector">
+            <label for="target-lang">Выберите язык:</label>
+            <select id="target-lang" name="target_lang">
+                {% for code, lang_name in languages %}
+                    <option value="{{ code }}">{{ lang_name }}</option>
+                {% endfor %}
+            </select>
+            <div class="output-block">
+                <textarea id="output-text" readonly placeholder="Результат будет здесь..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- Меню -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" id="translator">Переводчик</a></li>
+            <li><a href="#" id="dictionary">Словарь</a></li>
+            <li><a href="#" id="history">История</a></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'main/js/main.js' %}"></script>
+</body>
+</html>
