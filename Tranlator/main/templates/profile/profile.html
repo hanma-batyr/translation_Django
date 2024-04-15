@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block content %}
+    <div class="content-container">
+        <h1>User Profile</h1>
+        <div class="profile-info">
+            <p><strong>Username:</strong> {{ user.username }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <!-- Дополнительные поля профиля -->
+
+            <!-- Кнопка Logout -->
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" a href="logout">Logout</button>
+            </form>
+        </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="{% static 'profile/css/profile.css' %}">
+{% endblock %}

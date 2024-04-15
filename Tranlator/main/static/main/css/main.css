@@ -1,0 +1,80 @@
+/* Стили для тега body */
+body {
+    background-image: url('/static/main/img/2jpg.jpg'); /* Установка фонового изображения */
+    background-size: cover; /* Изображение занимает всю доступную область */
+    background-repeat: no-repeat; /* Запрет на повторение фона */
+    font-family: Arial, sans-serif; /* Установка шрифта для текста */
+    margin: 0; /* Удаление отступов от краев страницы */
+    padding: 0; /* Удаление внутренних отступов */
+    background-color: #222; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+}
+
+/* Стили для основного блока main */
+main {
+    padding: 20px; /* Добавление отступов вокруг содержимого */
+}
+
+/* Стили для блоков выбора языка и вывода */
+.language-selector,
+.output-block {
+    flex: 1; /* Делаем блоки растяжимыми */
+    margin: 10px; /* Отступы между блоками */
+}
+
+/* Стили для блоков ввода и вывода */
+.input-block,
+.output-block {
+    width: calc(50% - 20px); /* Установка ширины блока */
+    position: relative; /* Позиционирование */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для текстового поля ввода */
+textarea {
+    width: 100%; /* Занимает всю доступную ширину */
+    padding: 10px; /* Внутренние отступы */
+    border: 2px solid #8a2be2; /* Бордер */
+    border-radius: 5px; /* Скругление углов */
+    background-color: #333; /* Цвет фона */
+    color: #00f; /* Цвет текста */
+    resize: none; /* Запрет на изменение размера */
+}
+
+/* Стили для меток */
+label {
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+/* Стили для кнопок */
+button {
+    padding: 10px 20px; /* Внутренние отступы */
+    border: none; /* Удаление границы */
+    border-radius: 5px; /* Скругление углов */
+    cursor: pointer; /* Изменение курсора при наведении */
+}
+
+/* Стили при наведении на кнопки */
+button:hover {
+    background-color: #d13820; /* Изменение цвета фона */
+}
+
+/* Стили для надписи "Выберите язык" */
+.language-selector label {
+    background-color: #000; /* Цвет фона */
+    color: #00f; /* Цвет текста */
+    padding: 10px; /* Внутренние отступы */
+    border: 2px solid #00f; /* Бордер */
+    border-radius: 5px; /* Скругление углов */
+    display: inline-block; /* Элемент блочный */
+}
+
+/* Дополнительные стили для кнопок в блоке "Действия" */
+.action-buttons button {
+    background-color: #a00c0c; /* Красный цвет кнопок */
+}
+
+/* Стили при наведении на кнопки в блоке "Действия" */
+.action-buttons button:hover {
+    background-color: #d13820; /* Изменение цвета фона */
+}

@@ -4,11 +4,11 @@ from googletrans import Translator, LANGUAGES
 from django.http import JsonResponse
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login as auth_login, authenticate
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 from .models import TranslationHistory
+from django.contrib.auth import logout
 
 
 class SignupView(CreateView):
@@ -90,4 +90,17 @@ def index(request):
 @login_required
 def translation_history(request):
     history = TranslationHistory.objects.filter(user=request.user)
-    return render(request, "main/history.html", {"history": history})
+    return render(request, "history/history.html", {"history": history})
+
+
+@login_required
+def profile(request):
+    user = request.user
+    return render(request, "profile/profile.html", {"user": user})
+
+
+def logout_view(request):
+    logout(request)
+    return redirect(
+        "index"
+    )  # Замените 'index' на имя вашего представления главной страницы

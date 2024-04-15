@@ -1,0 +1,36 @@
+/* profile.css */
+
+/* Стили для контейнера информации о профиле */
+.profile-info {
+    background-color: #333; /* Темный фон */
+    color: #fff; /* Белый текст */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+}
+
+.profile-info strong {
+    font-weight: bold;
+}
+
+/* Стили для кнопки Logout */
+.profile-info form {
+    margin-top: 20px;
+}
+
+.profile-info button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #800000; /* Темно-красный цвет кнопки */
+    color: #fff; /* Белый цвет текста кнопки */
+    cursor: pointer;
+}
+
+.profile-info button:hover {
+    background-color: #a00c0c; /* Изменение цвета при наведении */
+}

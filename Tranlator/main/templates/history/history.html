@@ -1,0 +1,36 @@
+<!-- history.html -->
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+    Translation History
+{% endblock %}
+
+{% block content %}
+    <div class="content-container">
+        <h1>Translation History</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Исходный текст</th>
+                    <th>Язык исходного текста</th>
+                    <th>Переведенный текст</th>
+                    <th>Язык перевода</th>
+                    <th>Дата и время перевода</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in history %}
+                    <tr>
+                        <td>{{ entry.source_text }}</td>
+                        <td>{{ entry.source_lang }}</td>
+                        <td>{{ entry.target_text }}</td>
+                        <td>{{ entry.target_lang }}</td>
+                        <td>{{ entry.translated_at }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <link rel="stylesheet" type="text/css" href="{% static 'history/css/history.css' %}">
+{% endblock %}

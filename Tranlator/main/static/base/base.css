@@ -1,0 +1,48 @@
+/* base.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Темный фон */
+    color: #fff; /* Белый текст */
+}
+
+header {
+    background-color: #333;
+    color: #281eaf;
+    padding: 10px;
+    text-align: center; /* Расположение по центру */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #8d2323;
+    text-decoration: none;
+    font-size: 18px; /* Увеличение размера шрифта */
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #a00ead;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
