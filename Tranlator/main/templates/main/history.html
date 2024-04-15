@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation History</title>
+</head>
+<body>
+    <h1>Translation History</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Text</th>
+                <th>Source Language</th>
+                <th>Translation</th>
+                <th>Target Language</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in history %}
+                <tr>
+                    <td>{{ entry.source_text }}</td>
+                    <td>{{ entry.source_lang }}</td>
+                    <td>{{ entry.target_text }}</td>
+                    <td>{{ entry.target_lang }}</td>
+                    <td>{{ entry.translated_at }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
