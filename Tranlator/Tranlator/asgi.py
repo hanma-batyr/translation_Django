@@ -1,16 +1,17 @@
-"""
-ASGI config for Tranlator project.
+import os  # Импортируем модуль os для работы с операционной системой.
 
-It exposes the ASGI callable as a module-level variable named ``application``.
+from django.core.asgi import (
+    get_asgi_application,
+)  # Импортируем функцию get_asgi_application
 
-For more information on this file, see
-https://docs.djangoproject.com/en/5.0/howto/deployment/asgi/
-"""
+# для получения ASGI-совместимого приложения Django.
 
-import os
-
-from django.core.asgi import get_asgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Tranlator.settings')
+os.environ.setdefault(
+    "DJANGO_SETTINGS_MODULE", "Translator.settings"
+)  # Устанавливаем значение переменной
+# окружения DJANGO_SETTINGS_MODULE, чтобы
+# Django знал, какие настройки использовать.
 
 application = get_asgi_application()
+# Получаем ASGI-совместимое приложение Django,
+# которое будет обрабатывать веб-запросы.

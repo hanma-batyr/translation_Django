@@ -1,0 +1,49 @@
+body {
+    background-color: #212121; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+    font-family: Arial, sans-serif; /* Шрифт */
+    padding: 20px; /* Отступы вокруг содержимого */
+}
+
+h2, h3 {
+    color: #ff9800; /* Цвет заголовка */
+}
+
+a {
+    color: #ff9800; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+}
+
+a:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении на ссылку */
+}
+
+form {
+    background-color: #333333; /* Цвет фона формы */
+    padding: 20px; /* Отступы вокруг формы */
+    border-radius: 10px; /* Закругление углов формы */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 99%; /* Ширина полей ввода */
+    padding: 10px; /* Отступы внутри полей ввода */
+    margin-bottom: 10px; /* Отступ между полями ввода */
+    border-radius: 5px; /* Закругление углов полей ввода */
+    border: none; /* Убираем границу полей ввода */
+    background-color: #555555; /* Цвет фона полей ввода */
+    color: #ff9800; /* Цвет текста в полях ввода */
+}
+
+button[type="submit"] {
+    background-color: #ff9800; /* Цвет фона кнопки */
+    color: #ffffff; /* Цвет текста кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 5px; /* Закругление углов кнопки */
+    cursor: pointer; /* Изменяем указатель при наведении на кнопку */
+}
+
+button[type="submit"]:hover {
+    background-color: #805009; /* Цвет фона кнопки при наведении */
+}

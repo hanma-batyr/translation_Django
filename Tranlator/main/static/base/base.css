@@ -5,15 +5,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #222; /* Темный фон */
-    color: #fff; /* Белый текст */
 }
 
 header {
-    background-color: #333;
-    color: #281eaf;
+    background-color: #444; /* Темно-серый фон для заголовка */
     padding: 10px;
-    text-align: center; /* Расположение по центру */
+    text-align: center;
 }
 
 nav ul {
@@ -28,21 +25,61 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #8d2323;
     text-decoration: none;
-    font-size: 18px; /* Увеличение размера шрифта */
+    font-size: 18px;
+    color: #fff; /* Белый цвет текста ссылок */
 }
+
 
 main {
     padding: 20px;
 }
 
 footer {
-    background-color: #333;
-    color: #a00ead;
+    background-color: #444; /* Темно-серый фон для подвала */
+    color: #fff; /* Белый текст */
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
 }
+
+/* Общие стили для всех страниц */
+body {
+    background-color: #222; /* Темный фон */
+    color: #fff; /* Белый текст */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Устанавливает шрифт для всего текста на странице */
+    margin: 0; /* Убирает внешние отступы */
+    padding: 0; /* Убирает внутренние отступы */
+    background-color: #222; /* Устанавливает цвет фона страницы (темный фон) */
+    color: #ffffff; /* Устанавливает цвет текста (желтый) */
+}
+
+header {
+    background-color: #333; /* Устанавливает цвет фона заголовка */
+    color: #ffffff; /* Устанавливает цвет текста заголовка */
+    padding: 20px; /* Добавляет внутренние отступы к заголовку */
+    text-align: center; /* Выравнивает текст заголовка по центру */
+}
+
+nav ul {
+    list-style-type: none; /* Убирает маркеры списка */
+    margin: 0; /* Убирает внешние отступы */
+    padding: 0; /* Убирает внутренние отступы */
+}
+
+nav ul li {
+    display: inline; /* Располагает элементы списка горизонтально */
+    margin-right: 20px; /* Добавляет отступ справа между элементами списка */
+}
+
+nav ul li a {
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+    font-size: 18px; /* Устанавливает размер текста ссылок */
+    color: #ffffff; /* Устанавливает цвет текста ссылок (мягкий оттенок желтого) */
+}
+

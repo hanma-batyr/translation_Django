@@ -1,38 +1,39 @@
 {% extends 'base/base.html' %}
 {% load static %}
 
-{% block title %}About Us - My Website{% endblock %}
+{% block title %}Переводчик - Мой сайт{% endblock %}
 
 {% block content %}
-<div class="main-content">
-    <div class="language-selector">
-        <label for="source-lang">Выберите язык:</label>
-        <select id="source-lang" name="source_lang">
+<div class="container">
+    <h1>Переводчик</h1>
+    <form id="translation-form">
+        {% csrf_token %}
+        <label for="input_text">Введите текст для перевода:</label><br>
+        <textarea id="input_text" name="input_text" rows="4" cols="50"></textarea><br>
+        
+        <label for="source_lang">Исходный язык:</label>
+        <select id="source_lang" name="source_lang">
             {% for code, lang_name in languages %}
                 <option value="{{ code }}">{{ lang_name }}</option>
             {% endfor %}
-        </select>
-        <div class="input-block">
-            <textarea id="input-text" name="input_text" placeholder="Введите текст..."></textarea>
-        </div>
-    </div>
-    <div class="action-buttons">
-        <button id="translate-button">Перевести</button>
-        <button id="swap-button" onclick="swapLanguages()">↔</button>
-    </div>
-    <div class="language-selector">
-        <label for="target-lang">Выберите язык:</label>
-        <select id="target-lang" name="target_lang">
+        </select><br>
+        
+        <label for="target_lang">Язык перевода:</label>
+        <select id="target_lang" name="target_lang">
             {% for code, lang_name in languages %}
                 <option value="{{ code }}">{{ lang_name }}</option>
             {% endfor %}
-        </select>
-        <div class="output-block">
-            <textarea id="output-text" readonly placeholder="Результат будет здесь..."></textarea>
-        </div>
+        </select><br>
+        
+        <button type="button" id="swap-languages">Свап</button>
+        <button type="submit">Перевести</button>
+    </form>
+    
+    <div id="translation-result-container">
+        <h2>Результат перевода:</h2>
+        <div id="translation-result"></div>
     </div>
 </div>
-
 <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{% static 'main/js/main.js' %}"></script>

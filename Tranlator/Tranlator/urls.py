@@ -1,28 +1,31 @@
-"""
-URL configuration for Tranlator project.
+from django.contrib import (
+    admin,
+)  # Импортируем модуль для административной панели Django.
+from django.urls import (
+    path,
+    include,
+)  # Импортируем функции для работы с маршрутами URL Django.
+from django.contrib.auth import (
+    views as auth_views,
+)  # Импортируем представления авторизации Django.
+from main.views import (
+    SignupView,
+)  # Импортируем пользовательское представление для регистрации.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path, include
-from django.contrib.auth import views as auth_views
-from main.views import SignupView
-
+# Определяем переменную urlpatterns, которая содержит список маршрутов URL.
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('main.urls')), 
-    path('signup/', SignupView.as_view(), name='signup'),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
-    path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
+    path("admin/", admin.site.urls),  # Маршрут для административной панели
+    path("", include("main.urls")),  # Включаем маршруты из приложения main
+    path(
+        "signup/", SignupView.as_view(), name="signup"
+    ),  # Маршрут для регистрации нового пользователя.
+    path(
+        "login/", auth_views.LoginView.as_view(), name="login"
+    ),  # Маршрут для входа пользователя.
+    # Маршрут для входа пользователя
+    path(
+        "login/",
+        auth_views.LoginView.as_view(template_name="registration/login.html"),
+        name="login",
+    ),
 ]

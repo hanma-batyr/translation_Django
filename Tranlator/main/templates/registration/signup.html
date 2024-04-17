@@ -1,3 +1,5 @@
+{%load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,5 +13,7 @@
         {{ form.as_p }}
         <button type="submit">Signup</button>
     </form>
+    <p1 class="loginbutton"><a href="{% url 'login' %}">login</a></p1>
+    <link rel="stylesheet" type="text/css" href="{% static 'registration/css/signup.css' %}">
 </body>
 </html>

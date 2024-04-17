@@ -1,16 +1,17 @@
-"""
-WSGI config for Tranlator project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/
-"""
-
+# Импортируем модуль os для работы с операционной системой.
 import os
 
-from django.core.wsgi import get_wsgi_application
+# Импортируем функцию get_wsgi_application
+# для получения WSGI-совместимого приложения Django.
+from django.core.wsgi import (
+    get_wsgi_application,
+)
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Tranlator.settings')
+# Устанавливаем значение переменной
+# окружения DJANGO_SETTINGS_MODULE, чтобы
+# Django знал, какие настройки использовать.
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Tranlator.settings")
 
+# Получаем WSGI-совместимое приложение Django,
+# которое будет обрабатывать веб-запросы.
 application = get_wsgi_application()

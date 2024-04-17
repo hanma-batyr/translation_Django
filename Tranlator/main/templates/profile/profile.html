@@ -10,10 +10,12 @@
         <h1>User Profile</h1>
         <div class="profile-info">
             <p><strong>Username:</strong> {{ user.username }}</p>
-            <p><strong>Email:</strong> {{ user.email }}</p>
-            <!-- Дополнительные поля профиля -->
+            <p><strong>Ваши данные:</strong> </p>
+            <p><strong>...</strong> </p>
+            <p><strong>...</strong> </p>
+            <p><strong>...</strong> </p>
+            <p><strong>Уважаемые пользователи нашего сайта, администрация уважает и ценить конфидициальность каждого нашего юзера и не просить ввести(а если честно мне было лень)</strong> </p>
 
-            <!-- Кнопка Logout -->
             <form action="{% url 'logout' %}" method="post">
                 {% csrf_token %}
                 <button type="submit" a href="logout">Logout</button>
@@ -21,4 +23,5 @@
         </div>
     </div>
     <link rel="stylesheet" type="text/css" href="{% static 'profile/css/profile.css' %}">
+
 {% endblock %}
