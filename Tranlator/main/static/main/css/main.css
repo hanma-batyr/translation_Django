@@ -81,3 +81,7 @@ nav ul li.tra a:hover {
 nav ul li.account a:hover {
     color: rebeccapurple; /* Устанавливает цвет текста ссылок "Аккаунт" при наведении на них (пурпурный) */
 }
+
+.container h1, h2 {
+    color: #ffd700;
+}
